@@ -1,0 +1,22 @@
+//x
+10
+0762
+0XF02
+0.12e40
+946.9 = != not and or and
+andd h456_2
+begin else then if end var programm
+[(hola)]
+< <= > >=
++ - / *
+x,y.z;
+80,34.8;
+
+//Comentario
+begin
+x = 077;    //asigna x
+y = 0x3F5a; //Comentario
+z = 0.32e-4; //otro comentario
+if x + 34 > y or z == 0.4 then imprime(x,y);
+else imprime(y, 5z);
+end
