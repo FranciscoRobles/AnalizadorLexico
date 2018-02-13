@@ -95,7 +95,7 @@ int identificar(){
 				{
 					if(c=='_')
 					{
-						if(ident == 0)
+						if(ident == 0 && estado == 0)
 						{
 							ident = -1;
 						}
