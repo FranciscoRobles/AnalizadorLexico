@@ -11,6 +11,8 @@ begin else then if end var programm
 + - / *
 x,y.z;
 80,34.8;
+_465a
+_34
 
 //Comentario
 begin
