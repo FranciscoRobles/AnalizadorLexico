@@ -16,10 +16,11 @@
 FILE *inicio, *avance;
 char msj[100];
 int linea = 1;
+int ident = 0;
 
 /*
 Estados:
-error = -1, 57, 106, 111, 113
+error = -1, 57, 106, 111, 113, or ident = -1
 comentarios = 2
 */
 
@@ -92,6 +93,17 @@ int identificar(){
 				}
 				else if(estado == 0 || estado == 20)
 				{
+					if(c=='_')
+					{
+						if(ident == 0)
+						{
+							ident = -1;
+						}
+					}
+					else
+					{
+						ident = 1;
+					}
 					estado = 20;
 				}
 			}
@@ -180,7 +192,7 @@ int main(){
 	int estadoFinal = 0;
 	while(!isfeof()){
 		estadoFinal = identificar();
-		if(estadoFinal != -1 && estadoFinal != 57 && estadoFinal != 106 && estadoFinal != 111 && estadoFinal != 113)
+		if(estadoFinal != -1 && estadoFinal != 57 && estadoFinal != 106 && estadoFinal != 111 && estadoFinal != 113 && ident != -1)
 		{
 			aceptar();
 			imprimir(estadoFinal, msj);
